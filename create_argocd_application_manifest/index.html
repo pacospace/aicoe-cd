@@ -628,19 +628,19 @@ spec:
 <p><code>metadata.name</code>: the name of the <code>Application</code> resource as well as the name as it appears on the ui.</p>
 </li>
 <li>
-<p><code>spec.project</code>: the ArgoCD <code>Project</code> to which this <code>Application</code> belongs, ensure that this <code>Project</code> exists in <a href="../manifests/overlays/prod/privileged_resources/projects">projects</a>.</p>
+<p><code>spec.project</code>: the ArgoCD <code>Project</code> to which this <code>Application</code> belongs, ensure that this <code>Project</code> exists in <a href="../manifests/overlays/prod/projects">projects</a>.</p>
 </li>
 <li>
-<p><code>spec.destination.namespace</code>: the target namespace for this <code>Application</code>'s deployment, ensure that this namespace exists in <a href="../manifests/overlays/prod/resources/secrets/clusters">clusters</a> for the appropriate cluster/server.</p>
+<p><code>spec.destination.namespace</code>: the target namespace for this <code>Application</code>'s deployment, ensure that this namespace exists in <a href="../manifests/overlays/prod/secrets/clusters">clusters</a> for the appropriate cluster/server.</p>
 </li>
 <li>
-<p><code>spec.destination.cluster</code>: the target cluster server name for this <code>Application</code>'s deployment, ensure this server exists in  <a href="../manifests/overlays/prod/resources/secrets/clusters">clusters</a> for the appropriate cluster.</p>
+<p><code>spec.destination.cluster</code>: the target cluster server name for this <code>Application</code>'s deployment, ensure this server exists in  <a href="../manifests/overlays/prod/secrets/clusters">clusters</a> for the appropriate cluster.</p>
 </li>
 <li>
 <p><code>spec.source.path</code>: path to the Kustomization.yaml file relative to the repo's root.</p>
 </li>
 <li>
-<p><code>spec.source.repoURL</code>: the repository holding the <code>Application</code>'s desired state, ensure this repo exists within <code>argo_cm</code> <a href="../manifests/overlays/prod/resources/configs/argo_cm">here</a>.</p>
+<p><code>spec.source.repoURL</code>: the repository holding the <code>Application</code>'s desired state, ensure this repo exists within <code>argo_cm</code> <a href="../manifests/overlays/prod/configs/argo_cm">here</a>.</p>
 </li>
 </ul>
 <p>In case you are adding a private repo:</p>
