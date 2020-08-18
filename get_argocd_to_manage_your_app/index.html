@@ -458,8 +458,8 @@
 </ul>
 <p>The following items require a PR to the <code>aicoe-cd</code> repository, and require an <code>aicoe-sre</code> team member to merge/deploy changes:</p>
 <ul>
-<li>Ensure the application repository is added in the <code>repository</code> file in <a href="../manifests/overlays/prod/configs/argo_cm/repositories">repositories</a>.</li>
-<li>Ensure that all OCP resources that will be managed by ArgoCD on this cluster are included in the <code>inclusions</code> list in <a href="../manifests/overlays/prod/configs/argo_cm/resource.inclusions">resource.inclusions</a>.<ul>
+<li>Ensure the application repository is added in the <code>repository</code> file in <a href="https://github.com/AICoE/aicoe-cd/blob/master/manifests/overlays/prod/configs/argo_cm/repositories">repositories</a>.</li>
+<li>Ensure that all OCP resources that will be managed by ArgoCD on this cluster are included in the <code>inclusions</code> list in <a href="https://github.com/AICoE/aicoe-cd/blob/master/manifests/overlays/prod/configs/argo_cm/resource.inclusions">resource.inclusions</a>.<ul>
 <li>See <a href="../inclusions_explained/">here</a> for more info.</li>
 </ul>
 </li>
@@ -471,7 +471,7 @@
 <p>The following require an <code>aicoe-sre</code> team member to make the changes:</p>
 <ul>
 <li>Ensure your namespace exists in your cluster's spec see <a href="../admin/add_new_cluster_spec/">here</a> for details.</li>
-<li>If you are switching between ArgoCD managed namespaces, and that namespace was deleted in OCP, then ensure it's also removed from your cluster's credentials found here <a href="../manifests/overlays/prod/secrets/clusters">clusters</a>.</li>
+<li>If you are switching between ArgoCD managed namespaces, and that namespace was deleted in OCP, then ensure it's also removed from your cluster's credentials found here <a href="https://github.com/AICoE/aicoe-cd/tree/master/manifests/overlays/prod/secrets/clusters">clusters</a>.</li>
 </ul>
                 
               

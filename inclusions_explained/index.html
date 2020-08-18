@@ -448,12 +448,12 @@ This can be an issue when deploying apps to a namespace in a cluster, because Ar
 attempt to discover all namespace scoped resourced and be denied. To avoid this, we limit
 ArgoCD to discover the resources that are available to project admins, these are added
 under the <code>resource.inclusions</code> ArgoCD configurations in
-<a href="../manifests/overlays/prod/configs/argo_cm/resource.inclusions">resource.inclusions</a></p>
+<a href="https://github.com/AICoE/aicoe-cd/blob/master/manifests/overlays/prod/configs/argo_cm/resource.inclusions">resource.inclusions</a></p>
 <p>If your application contains resources that a project <code>admin</code> does not have permissions
 to list/edit then you can request that a cluster admin deploy aggregated roles to add
 such permissions. See here for an <a href="https://github.com/argoproj/argo-events/blob/master/manifests/cluster-install/rbac/argo-events-aggregate-to-admin.yaml">example</a>.</p>
 <p>Once having done so, you can make a PR with these resources added onto the <code>resource.inclusions</code>
-list in <a href="../manifests/overlays/prod/configs/argo_cm/resource.inclusions">resource.inclusions</a>.</p>
+list in <a href="https://github.com/AICoE/aicoe-cd/blob/master/manifests/overlays/prod/configs/argo_cm/resource.inclusions">resource.inclusions</a>.</p>
                 
               
               
