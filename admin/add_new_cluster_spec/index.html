@@ -537,16 +537,27 @@ metadata:
 type: Opaque
 stringData:
     name:  datahub.psi.redhat.com
-    config: {&quot;bearerToken&quot;: ${SA_TOKEN}, &quot;tlsClientConfig&quot;: {&quot;insecure&quot;: true}}
+    config: |
+        {&quot;bearerToken&quot;: ${SA_TOKEN}, &quot;tlsClientConfig&quot;: {&quot;insecure&quot;: true}}
     namespaces: namespace_1,namespace_2
     server: https://datahub.psi.redhat.com:44
 </code></pre>
 
-<p>Let's go over what some of the fields in the <code>stringData</code> field refer to:
-- <code>name</code>: Name for this cluster, appears in the ArgoCD UI
-- <code>config</code>: The token goes here, replace the contents of ${SA_TOKEN} with the one retrieved earlier.
-- <code>namespace</code>: List of namespaces ArgoCD has permissions to deploy to, comma-separated, no whitespace
-- <code>server</code>: Cluster api server hostname, can be retrieved by running <code>oc whoami --show-server</code></p>
+<p>Let's go over what some of the fields in the <code>stringData</code> field refer to:</p>
+<ul>
+<li>
+<p><code>name</code>: Name for this cluster, appears in the ArgoCD UI</p>
+</li>
+<li>
+<p><code>config</code>: The token goes here, replace the contents of ${SA_TOKEN} with the one retrieved earlier.</p>
+</li>
+<li>
+<p><code>namespace</code>: List of namespaces ArgoCD has permissions to deploy to, comma-separated, no whitespace</p>
+</li>
+<li>
+<p><code>server</code>: Cluster api server hostname, can be retrieved by running <code>oc whoami --show-server</code></p>
+</li>
+</ul>
 <p>SOPS encrypt the manifest and store it in the <code>clusters</code> directory.</p>
 <pre><code>$ cd manifests/overlays/prod/resources/secrets/clusters/
 $ sops -e datahub.psi.redhat.com.yaml &gt; datahub.psi.redhat.com.enc.yaml
