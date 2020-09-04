@@ -537,11 +537,12 @@
                 <h1 id="deploying-a-development-environment">Deploying a development environment</h1>
 <h2 id="prequisites">Prequisites</h2>
 <ul>
-<li>An OCP 4.x Development cluster</li>
-<li>Must have cluster admin</li>
+<li>An OCP 4.x Development cluster.</li>
+<li>Must have cluster admin.</li>
+<li>Follow the steps <a href="../manage_your_app_secrets/">here</a>.</li>
 </ul>
 <h2 id="instructions">Instructions</h2>
-<p>Create the project <code>aicoe-argocd-dev</code> and <code>argocd-test</code>. The latter wll be used
+<p>Create the project <code>aicoe-argocd-dev</code> and <code>argocd-test</code>. The latter will be used
 for deploying a dev application via ArgoCD.</p>
 <pre><code class="bash">oc new-project argocd-test
 oc new-project aicoe-argocd-dev
