@@ -1,6 +1,6 @@
 # ArgoCD deployment
 
-This repository contains the necessary artifacts to deploy ArgoCD to dev and prod.
+This repository contains the necessary artifacts to deploy ArgoCD to dev and prod!
 
 ## Deployment Instructions
 
